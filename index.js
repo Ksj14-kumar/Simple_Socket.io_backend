@@ -20,18 +20,18 @@ const bodyParser = require("body-parser");
 const { default: mongoose } = require("mongoose");
 
 const PORT = process.env.PORT || 5000
-const URI = process.env.URL
+// const URI = process.env.URL
 
 
-mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
-    if (err) {
-        console.log(err)
-        throw Error(err)
-    }
-    else {
-        console.log("connected to db")
-    }
-})
+// mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+//     if (err) {
+//         console.log(err)
+//         throw Error(err)
+//     }
+//     else {
+//         console.log("connected to db")
+//     }
+// })
 app.use(cors({
     origin: "*"
 }))
