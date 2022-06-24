@@ -39,7 +39,7 @@ app.use(cors({
 httpProxy.createProxyServer({
     target: FrontendURL,
     ws: true,
-}).listen(80)
+})
 app.use(bodyParser.json({ limit: "50mb " }))
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }))
 
