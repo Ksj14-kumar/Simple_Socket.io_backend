@@ -14,7 +14,7 @@ const io = new Server(server, {
 })
 require("./Socket_Connection/Socket")(io)
 
-const router = require("./router.js")
+// const router = require("./router.js")
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const { default: mongoose } = require("mongoose");
@@ -43,7 +43,12 @@ httpProxy.createProxyServer({
 app.use(bodyParser.json({ limit: "50mb " }))
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }))
 
-app.use("/api/v1", router)
+
+app.use("/", (req, res) => {
+    res.send("hello")
+})
+
+// app.use("/api/v1", router)
 
 
 server.listen(PORT, (err) => {
